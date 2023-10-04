@@ -1,0 +1,36 @@
+{
+  "name": "eddgie_unified_services",
+  "version": "1.0.0",
+  "description": "Eddgie Unified Services",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "index.bat",
+    "swagger-autogen": "node swagger.js",
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bnlwe-p-56728-ia-01-unilevercom-vsts.visualstudio.com/bieno-da-p-904043-vstsp/_git/eddgie_unified_services"
+  },
+  "author": "Tredence",
+  "license": "ISC",
+  "dependencies": {
+    "@json2csv/node": "^6.1.3",
+    "axios": "^1.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "sequelize": "^6.29.3",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.2",
+    "tedious": "^15.1.3",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.21",
+    "supertest": "^6.3.3"
+  }
+}
