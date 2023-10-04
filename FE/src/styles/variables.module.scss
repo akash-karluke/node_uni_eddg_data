@@ -1,0 +1,26 @@
+$navColor: #005eef;
+$primaryColor: $navColor;
+$greenColor: #00b190;
+$purpleColor: #9c44c0;
+$blueColor: #00b2ff;
+$pinkColor: #ff79c6;
+$footerColor: #eaeaea;
+$MQMobile: 576px;
+$MQTablet: 786px;
+$MQLarge: 992px;
+$MQXLarge: 1200px;
+$MQXXLarge: 1400px;
+
+:export {
+  navColor: $navColor;
+  primaryColor: $primaryColor;
+  greenColor: $greenColor;
+  purpleColor: $purpleColor;
+  blueColor: $blueColor;
+  pinkColor: $pinkColor;
+  MQMobile: $MQMobile;
+  MQTablet: $MQTablet;
+  MQLarge: $MQLarge;
+  MQXLarge: $MQXLarge;
+  MQXXLarge: $MQXXLarge;
+}

@@ -1,0 +1,226 @@
+// * Common Styling
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: UnileverShilling, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: UnileverShilling;
+  src: url("/font/UnileverShilling.ttf");
+}
+
+html,
+body {
+  max-width: 100vw;
+  // overflow-x: hidden;
+  font-family: UnileverShilling, Arial, Helvetica, sans-serif;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-select {
+  margin-bottom: 0.5rem !important;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 1.7;
+}
+
+.title-2 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.muted {
+  color: #797979;
+}
+
+.text-primary {
+  color: $primaryColor;
+}
+
+.ant-divider {
+  &.small {
+    margin-block: 0.8rem;
+  }
+}
+
+.container {
+  max-width: 1320px;
+  margin-inline: auto;
+
+  @media (max-width: $MQXXLarge) {
+    max-width: 1140px;
+  }
+
+  @media (max-width: $MQXLarge) {
+    max-width: 1060px;
+  }
+
+  @media (max-width: $MQLarge) {
+    max-width: 820px;
+  }
+
+  @media (max-width: $MQTablet) {
+    max-width: 640px;
+  }
+
+  @media (max-width: $MQMobile) {
+    max-width: auto;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+main.section {
+  margin: 0 50px;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ant-space-item {
+  line-height: normal;
+}
+
+.ls-wide {
+  letter-spacing: 1.44px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.d-sm-none {
+  @media (max-width: $MQMobile) {
+    display: none !important;
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgba(179, 177, 177, 0.275);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  // border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  // border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  // border-radius: 5px;
+}
+
+/* Modal Scrollbar CSS */
+// .modal-content {
+//   overflow-y: auto;
+// }
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-track:hover {
+  background-color: #f5f5f5;
+}
+
+#__next > div > .ant-spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+// * Margin & Padding classes
+$spaceamounts: (
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  75,
+  100
+); // Adjust this to include the pixel amounts you need.
+$sides: (
+  "": "all",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+
+@each $space in $spaceamounts {
+  @each $prefix, $value in $sides {
+    $property: if($prefix == "", "", -#{$value});
+
+    .m#{$prefix}#{$space} {
+      margin#{$property}: #{$space}px;
+    }
+
+    .p#{$prefix}#{$space} {
+      padding#{$property}: #{$space}px;
+    }
+  }
+}
+
+.ant-pagination {
+  .ant-pagination-item {
+    min-width: 32px !important;
+    border-radius: 0;
+    border-color: #c7c7c7 !important;
+    background: #f5f5f5 !important;
+
+    &-active {
+      background-color: #fff !important;
+    }
+  }
+}
